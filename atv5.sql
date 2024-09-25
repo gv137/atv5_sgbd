@@ -20,7 +20,9 @@ describe disciplina;
 create table cursa(
 codigo varchar(50) primary key,
 rgmfk varchar (70),
-codigofk varchar(50)
+codigofk varchar(50),
+foreign key (rgmfk) references aluno(rgm),
+foreign key (codigofk) references disciplina(codigo)
 );
 
 describe cursa;
